@@ -1,2 +1,11 @@
-package Framework.Browser;public enum TypeBrowser {
+package Framework.Browser;
+
+public enum TypeBrowser {
+
+    CHROME,
+
+    FIREFOX,
+
+
+
 }
