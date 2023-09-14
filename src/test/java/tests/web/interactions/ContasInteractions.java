@@ -66,6 +66,7 @@ public class ContasInteractions {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.out.println("Saldo da primeira conta:" + saldo);
         contaPages.getBntSair().click();
     }
 
@@ -93,6 +94,7 @@ public class ContasInteractions {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.out.println("Saldo da segunda conta:" + saldo);
     }
 
     public void clicarEmTransferencia() {
@@ -138,6 +140,7 @@ public class ContasInteractions {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.out.println("Saldo atualizado apos a transferencia da segunda conta:" + saldo);
     }
 
     public String getSaldoContaAtualizado2() {
@@ -155,12 +158,14 @@ public class ContasInteractions {
         WebElement saldoElement = contaPages.getSaldoDaConta();
         String saldo = saldoElement.getText();
 
+
         try {
             FilesOperation.setSaldo("1", saldo); // Atualize o saldo no arquivo "saldo.properties"
             saldoContaAtualizado2 = saldo; // Armazene o saldo atualizado na classe
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        System.out.println("Saldo atualizado apos a transferencia da primeira conta:" + saldo);
     }
 
     public void clicoEmSair(){

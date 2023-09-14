@@ -72,7 +72,7 @@ public class ContasSteps {
 
     @Dado("digito o valor a ser transferido no campo valor da transferencia")
     public void digito_o_valor_a_ser_transferido_no_campo_valor_da_transferência() {
-        contasInteractions.ValorDaTransferencia("200");
+        contasInteractions.ValorDaTransferencia("500");
     }
 
     @Dado("digito um texto no campo descrição")
@@ -121,3 +121,4 @@ public class ContasSteps {
 
 
 }
+
